@@ -1,0 +1,24 @@
+.explore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fafafa;
+    @include margin-padding(null, null, all, 35px);
+
+    &__title {
+        text-align: center;
+        @include margin-padding(bottom, -10px, null, null);
+        font-weight: bold;
+    }
+
+    &__para {
+        text-align: center;
+        font-weight: lighter;
+        @include margin-padding(bottom, 30px, null, null);
+    }
+
+    & button {
+        @include margin-padding(bottom, 30px, all, 15px);
+    }
+
+}

@@ -1,0 +1,43 @@
+    .step{
+    &__button {
+        @include margin-padding(all, 15px 0 15px 12px, all, 24px);
+        @include shadow(rgba(0, 0, 0, .125) 4px 4px 8px);
+        @include borderradius(20px);
+        background-color: $light-grey;
+        display: flex;
+        position: relative;
+
+        &::before {
+            counter-increment: compteListe 1;
+            content: counter(compteListe) " ";
+            background: $colour-primary;
+            height: 24px;
+            width: 24px;
+            border-radius: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            position: absolute;
+            left: -12px;
+        }
+
+        &:hover {
+            @include lightenhover ($colour-primary);
+
+            .tuto__icone {
+                color: $colour-primary;
+            }
+        }
+
+        @include desktop-only {
+            width: 25%;
+        }
+
+
+    &__icone {
+        margin-right: 16px;
+        color: #7e7e7e;
+    }
+}
+    }

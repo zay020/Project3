@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmyfood</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/b169b4c8a2.js" crossorigin="anonymous"></script>
+</head>
+  <body>
+  
+  <header>
+      <img src="./Images_and_text_Ohmyfood-2/images/logo/ohmyfood@2x.svg" alt="OhMyFood" class="logo">
+    </header>
+    <main>
+        
+      <div class="localisation">
+        <form action="post" class="localisation__form">
+          <button class="localisation__button"><i class=" fa-solid fa-location-dot"></i></button>
+          <input type="text" name="localisation" class="localisation__text" placeholder="Islington. London">
+        </form>
+      </div>
+   
+      <section class="explore">
+        <h1 class="explore__title">Book the meal you want</h1>
+        <p class="explore__para">Discover our carefully selected high-end restaurants</p>
+        <button class="buttongradient">Explore our restaurants</button>
+      </section>
+
+      <section class="step">
+        <h2 class="step__title">How it works</h2>
+        <ol class="step__list">
+          <li class="step__stage"><i class="fa-solid fa-mobile-screen-button step__icon"></i>Choose a restaurant
+          </li>
+          <li class="step__stage"><i class="fa-solid fa-list-ul step__icon"></i>Build your meal</li>
+          <li class="step__stage"><i class="fa-solid fa-store step__icon"></i>Enjoy your meal at the restaurant</li>
+        </ol>
+      </section>
+
+      <section class="restaurants">
+        <h2 class="restaurants__title">Restaurants</h2>
+        <div class="restaurants__list">
+          <div class="restaurants__form">
+            <figure class="restaurants__figure">
+              <a href="./pages/kitchenwest.html" class="restaurants__link" aria-hidden="true" tabindex="-1"></a> 
+                <img src="./Images_and_text_Ohmyfood-2/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                     alt="Kitchen West" class="restaurants__img">
+                <p class="restaurants__new">New</p>
+                <figcaption class="restaurants__figcaption">
+                    <h3 class="restaurants__name">Kitchen West</h3>
+                    <p class="restaurants__loc">Angel</p>
+                    <input type="checkbox" id="heartCheckbox" class="heart-checkbox">
+                    <label for="heartCheckbox" class="heart-button"></label> 
+                </figcaption>
+            </figure>
+        </div>
+        <div class="restaurants__form">
+          <figure class="restaurants__figure">
+              <a href="./pages/elderflower.html" class="restaurants__link" aria-hidden="true" tabindex="-1"></a>
+                  <img src="./Images_and_text_Ohmyfood-2/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                       alt="Elderflower" class="restaurants__img">
+                  <p class="restaurants__new">New</p>
+                  <figcaption class="restaurants__figcaption">
+                      <h3 class="restaurants__name">Elderflower</h3>
+                      <p class="restaurants__loc">Old Street</p>
+                      <input type="checkbox" id="heartCheckbox1" class="heart-checkbox">
+                      <label for="heartCheckbox1" class="heart-button"></label>
+                  </figcaption>
+          </figure>
+      </div>
+      <div class="restaurants__form">
+        <figure class="restaurants__figure">
+            <a href="./pages/shoreditchcanteen.html" class="restaurants__link" aria-hidden="true" tabindex="-1"></a>
+                <img src="./Images_and_text_Ohmyfood-2/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                     alt="Shoreditch Canteen" class="restaurants__img">
+                <figcaption class="restaurants__figcaption">
+                    <h3 class="restaurants__name">Shoreditch Canteen</h3>
+                    <p class="restaurants__loc">Shoreditch</p>
+                    <input type="checkbox" id="heartCheckbox2" class="heart-checkbox">
+                    <label for="heartCheckbox2" class="heart-button"></label>
+                </figcaption>
+        </figure>
+    </div>
+    <div class="restaurants__form">
+      <figure class="restaurants__figure">
+          <a href="./pages/thebayleaf.html" class="restaurants__link" aria-hidden="true" tabindex="-1"></a>
+              <img src="./Images_and_text_Ohmyfood-2/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                   alt="The Bay Leaf" class="restaurants__img">
+              <figcaption class="restaurants__figcaption">
+                  <h3 class="restaurants__name">The Bay Leaf</h3>
+                  <p class="restaurants__loc">Hoxton</p>
+                  <input type="checkbox" id="heartCheckbox3" class="heart-checkbox">
+                  <label for="heartCheckbox3" class="heart-button"></label>
+              </figcaption>
+      </figure>
+  </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <ul class="footer__list">
+        <li class="footer__title">ohmyfood</li>
+        <li class="footer__items"><i class="fa-solid fa-utensils"></i><a href="#">Suggest a restaurant</a></li>
+        <li class="footer__items"><i class="fa-solid fa-handshake-angle"></i><a href="#">Become a partner</a></li>
+        <li class="footer__items"><a href="#">Legal notice</a></li>
+        <li class="footer__items"><a href="mailto:contact@ohmyfood.co.uk">Contact</a></li>
+      </ul>
+    </footer>
+
+    <div class="loader__wrapper">
+      <div class="loader"></div>
+      </div>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+$colour-primary: #9356DC;
+$colour-secondary: #FF79DA;
+$colour-tertiary:#99E2D0;
+$gradient: linear-gradient(#FF79DA, #9356DC);
+$light-grey:#f5f5f5;
+$dark-grey:#f3f3f3;
+$white:white;
+$breakpoints: (desktop: 992px,
+  tablet: 768px,
+);
+$carrew: 30px;
+$carreh: 30px;
+$carremargin: 5px;
+$loaderw: $carrew * 3+$carremargin *2;
+$loaderh: $carreh * 3+$carremargin *2;
+$delaydebut: 0.3s;
+$topdebut: -100px;

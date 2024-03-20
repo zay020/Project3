@@ -1,0 +1,14 @@
+header {
+    @include margin-padding (all, 20px 0, null, null);
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header__return {
+    position: absolute;
+    left: 20px;
+    color: #000;
+    font-size: 20px;
+  }

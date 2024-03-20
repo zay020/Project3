@@ -1,0 +1,66 @@
+.step {
+    @include margin-padding(null, null, all, 30px 15px);
+
+
+    &__list {
+        list-style-type: none;
+        @include margin-padding(null, null, all, 0);
+        list-style: none;
+        counter-reset: list;
+        margin: 0 auto; 
+        max-width: 1543px;
+
+        @include tablet-only {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+    &__icon {
+        color: $colour-primary;
+    }
+
+    &__stage {
+        @include margin-padding(all, 15px 0 15px 12px, all, 24px);
+        @include shadow(rgba(0, 0, 0, .125) 4px 4px 8px);
+        @include borderradius(20px);
+        background-color: $light-grey;
+        display: flex;
+        position: relative;
+
+        &::before {
+            counter-increment: list 1;
+            content: counter(list) " ";
+            background: $colour-primary;
+            height: 24px;
+            width: 24px;
+            border-radius: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            position: absolute;
+            left: -12px;
+        }
+
+        &:hover {
+            @include lightenhover ($colour-primary);
+
+        }
+
+        @include desktop-only {
+            width: 25%;
+        }
+    }
+
+    &__lien {
+        text-decoration: none;
+    }
+
+    &__icon {
+        margin-right: 16px;
+        color: #7e7e7e;
+    }
+    &__title{
+        @include margin-fix;
+    }
+}

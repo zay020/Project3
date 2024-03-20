@@ -1,0 +1,186 @@
+.menu {
+    @include margin-padding(top, -60px, all, 20px 20px 30px 20px);
+    @include borderradius(50px 50px 0 0);
+    background-color: $light-grey;
+    position: relative;
+    max-width: 1542px;
+    margin: 0 auto;
+
+    @include desktop-only {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    &__image {
+        height: 330px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-evenly;
+
+        &__title {
+            font-family: Shrikhand;
+            font-style: italic;
+            font-size: 30px;
+        }
+
+        & .fa-heart {
+            @include heart;
+            align-self: center;
+            font-size: 30px;
+        }
+        @include desktop-only {
+            width: 100%;
+            justify-content: center;
+            gap: 30px;
+        }
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        @include desktop-only {
+            width: 30%;
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: 400;
+        position: relative;
+        @include margin-padding(bottom, 0, bottom, 10px);
+
+        &::after {
+            content: "";
+            width: 50px;
+            height: 5px;
+            background-color: $colour-tertiary;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+
+    &__info {
+        max-width: 80%;
+        flex: 1;
+
+        &>* {
+            margin: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+
+    &__card {
+        display: flex;
+        justify-content: space-between;
+        background-color: $white;
+        @include margin-padding(null, null, all, 10px 0 10px 10px);
+        border: transparent solid 0px;
+        @include borderradius(15px);
+        @include shadow(#E5E5E5 0px 0px 15px 3px);
+        animation: menu 1s forwards;
+        opacity: 0;
+        overflow: hidden;
+
+        @include tablet-only {
+            width: 80%;
+            @include margin-padding(all, auto, null, null)
+        }
+
+        @include desktop-only {
+            width: 100%;
+            @include margin-padding(all, 0, all, 10px 0 10px 10px);
+        }
+
+        &:nth-child(2) {
+            @include delay(2 * $delaydebut);
+        }
+
+        &:nth-child(3) {
+            @include delay(3 * $delaydebut);
+        }
+
+        &:nth-child(4) {
+            @include delay(4 * $delaydebut);
+        }
+
+        &:nth-child(5) {
+            @include delay(5 * $delaydebut);
+        }
+
+        &__price {
+            display: flex;
+            align-self: flex-end;
+            justify-content: flex-end;
+            font-weight: bold;
+            @include margin-padding(all, 0 30px 0 10px, null, null);
+        }
+
+        &__validation {
+            background: $colour-tertiary;
+            @include margin-padding(all, -16px -80px -16px -16px, null, null);
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include transition (0.5s)
+        }
+
+        &__icon {
+            height: 25px;
+            width: 25px;
+            background-color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include borderradius(100px);
+
+            & i {
+                color: $colour-tertiary;
+
+                &:before {
+                    content: "\f00c";
+                    font-family: FontAwesome;
+                }
+            }
+        }
+
+        &:hover {
+            & .menu__card__icon {
+                animation: rotateicon 0.5s 1 0.2s forwards;
+            }
+
+            & .menu__card__validation {
+                margin-right: 0px;
+            }
+
+            & .menu__info {
+                max-width: 80%;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    }
+
+    & .buttongradient {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        @include margin-padding(all, 30px auto, all, 15px);
+
+        @include desktop-only {
+            width: 20%;
+            margin-top: 50px;
+        }
+    }
+}
